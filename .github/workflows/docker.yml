@@ -8,7 +8,7 @@ jobs:
 build-test-docker:
 runs-on: ubuntu-latest
 
-```
+
 steps:
   - name: Checkout code
     uses: actions/checkout@v4
@@ -44,4 +44,4 @@ steps:
       tags: |
         ${{ secrets.DOCKERHUBUSERNAME }}/webappapril:latest
         ${{ secrets.DOCKERHUBUSERNAME }}/webappapril:${{ github.sha }}
-```
+
