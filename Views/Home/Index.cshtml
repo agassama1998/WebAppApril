@@ -1,8 +1,199 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Dashboard";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="hero">
+
+    <div class="hero-bg"></div>
+
+    <div class="container">
+
+        <!-- keep your pipeline UI here -->
+
+        <body>
+
+            <nav id="nav">
+               
+                <ul class="nav-links"> 
+                    <li><a href="#pipeline">Pipeline</a></li>
+                    <li><a href="#metrics">Metrics</a></li>
+                    <li><a href="#runs">Runs</a></li>
+                
+
+            <section class="hero">
+                <div class="hero-bg"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <p class="hero-eyebrow">● Live Dashboard</p>
+                    <h1 class="hero-title">CI/CD Pipeline<br><span>Learn with Abou</span></h1>
+                    <p class="hero-sub">Monitor every stage of your continuous integration and delivery workflow in real time.</p>
+                    <div class="hero-badges">
+                        <span class="badge live">● Live</span>
+                        <span class="badge">main branch</span>
+                        <span class="badge">GitHub Actions</span>
+                        <span class="badge">v2.4.1</span>
+                    </div>
+                </div>
+            </section>
+
+            <div style="background:var(--dark);position:relative;z-index:1">
+
+                <div class="section" id="pipeline">
+                    <div class="section-label">Pipeline Stages</div>
+                    <div class="pipeline-grid reveal">
+                        <div class="stage">
+                            <div class="stage-num">01</div>
+                            <div class="stage-icon success">✓</div>
+                            <div class="stage-name">Source</div>
+                            <div class="stage-desc">Code checkout from main branch</div>
+                            <div class="stage-status">
+                                <span class="dot dot-success"></span>
+                                <span style="color:var(--success)">Passed · 4s</span>
+                            </div>
+                        </div>
+                        <div class="stage">
+                            <div class="stage-num">02</div>
+                            <div class="stage-icon success">✓</div>
+                            <div class="stage-name">Build</div>
+                            <div class="stage-desc">Compile &amp; package application</div>
+                            <div class="stage-status">
+                                <span class="dot dot-success"></span>
+                                <span style="color:var(--success)">Passed · 1m 12s</span>
+                            </div>
+                        </div>
+                        <div class="stage">
+                            <div class="stage-num">03</div>
+                            <div class="stage-icon success">✓</div>
+                            <div class="stage-name">Test</div>
+                            <div class="stage-desc">Unit &amp; integration tests</div>
+                            <div class="stage-status">
+                                <span class="dot dot-success"></span>
+                                <span style="color:var(--success)">Passed · 2m 38s</span>
+                            </div>
+                        </div>
+                        <div class="stage">
+                            <div class="stage-num">04</div>
+                            <div class="stage-icon running" style="font-size:18px">↻</div>
+                            <div class="stage-name">Security</div>
+                            <div class="stage-desc">SAST &amp; dependency scan</div>
+                            <div class="stage-status">
+                                <span class="dot dot-running"></span>
+                                <span style="color:var(--running)">Running…</span>
+                            </div>
+                        </div>
+                        <div class="stage">
+                            <div class="stage-num">05</div>
+                            <div class="stage-icon pending" style="color:var(--pending)">○</div>
+                            <div class="stage-name">Stage</div>
+                            <div class="stage-desc">Deploy to staging environment</div>
+                            <div class="stage-status">
+                                <span class="dot dot-pending"></span>
+                                <span style="color:var(--pending)">Pending</span>
+                            </div>
+                        </div>
+                        <div class="stage">
+                            <div class="stage-num">06</div>
+                            <div class="stage-icon pending" style="color:var(--pending)">○</div>
+                            <div class="stage-name">Deploy</div>
+                            <div class="stage-desc">Release to production</div>
+                            <div class="stage-status">
+                                <span class="dot dot-pending"></span>
+                                <span style="color:var(--pending)">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id="metrics">
+                    <div class="section-label">This Week</div>
+                    <div class="metrics-grid reveal">
+                        <div class="metric">
+                            <div class="metric-label">Total Runs</div>
+                            <div class="metric-value">47</div>
+                            <div class="metric-change">↑ +12 vs last week</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Success Rate</div>
+                            <div class="metric-value green">91%</div>
+                            <div class="metric-change">↑ +3pp improvement</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Avg Duration</div>
+                            <div class="metric-value blue">6m 22s</div>
+                            <div class="metric-change">↓ 48s faster</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Deployments</div>
+                            <div class="metric-value">9</div>
+                            <div class="metric-change">3 to production</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id="runs">
+                    <div class="section-label">Recent Runs</div>
+                    <div class="runs-table reveal">
+                        <div class="run-row">
+                            <span class="run-id">#1084</span>
+                            <span class="run-pill pill-running">Running</span>
+                            <span class="run-msg">feat: add oauth2 login support</span>
+                            <span class="run-time">now</span>
+                        </div>
+                        <div class="run-row">
+                            <span class="run-id">#1083</span>
+                            <span class="run-pill pill-success">Passed</span>
+                            <span class="run-msg">fix: resolve null pointer in payment module</span>
+                            <span class="run-time">18m ago</span>
+                        </div>
+                        <div class="run-row">
+                            <span class="run-id">#1082</span>
+                            <span class="run-pill pill-success">Passed</span>
+                            <span class="run-msg">chore: bump node to 22.x</span>
+                            <span class="run-time">1h ago</span>
+                        </div>
+                        <div class="run-row">
+                            <span class="run-id">#1081</span>
+                            <span class="run-pill pill-fail">Failed</span>
+                            <span class="run-msg">feat: add rate limiting middleware</span>
+                            <span class="run-time">3h ago</span>
+                        </div>
+                        <div class="run-row">
+                            <span class="run-id">#1080</span>
+                            <span class="run-pill pill-success">Passed</span>
+                            <span class="run-msg">docs: update API reference</span>
+                            <span class="run-time">5h ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <div class="footer-status">
+                        <span class="footer-dot"></span>
+                        <span>Live · Auto-refreshing every 30s</span>
+                    </div>
+                    <span>CI/CD Pipeline Learn with Abou · v2.4.1</span>
+                </footer>
+
+            </div>
+
+            <script>
+                // Sticky nav
+                const nav = document.getElementById('nav');
+                window.addEventListener('scroll', () => {
+                  nav.classList.toggle('scrolled', window.scrollY > 80);
+                });
+
+                // Scroll reveal
+                const reveals = document.querySelectorAll('.reveal');
+                const observer = new IntersectionObserver(entries => {
+                  entries.forEach(e => {
+                    if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+                  });
+                }, {threshold: 0.1});
+                reveals.forEach(el => observer.observe(el));
+            </script>
+        </body>
+
+    </div>
+
 </div>
