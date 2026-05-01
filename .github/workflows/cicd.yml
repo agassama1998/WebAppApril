@@ -74,12 +74,12 @@ jobs:
             docker pull ${{ env.IMAGE_NAME }}:latest
 
             # Stop and remove existing container (if running)
-            docker stop webappapril || true
-            docker rm webappapril || true
+            docker stop webappapril:latest || true
+            docker rm webappapril:latest || true
 
             # Run the new container
             docker run -d \
-              --name webappapril \
+              --name webappapril:latest \
               --restart unless-stopped \
               -p 8080:8080 \
               -e ASPNETCORE_ENVIRONMENT=Production \
