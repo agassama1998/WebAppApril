@@ -10,4 +10,4 @@ finally, you can pull the image from Docker Hub and run it anywhere! 🚀 wooooo
 Now Am adding a Deployment phase to deploy the Docker image to Aws Web App for Containers. 🌐
 by deploying my infrastructure as code using Terraform. 🏗️
 and I will be using GitHub Actions to automate the deployment process. 🛠️
-edited yml file
+edited yml file to include the deployment phase. 📝
